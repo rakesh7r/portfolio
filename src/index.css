@@ -32,6 +32,11 @@
     box-sizing: border-box;
 }
 
+body,
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     font-weight: 500;
     color: #646cff;
