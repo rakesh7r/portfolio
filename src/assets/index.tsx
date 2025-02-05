@@ -1,3 +1,3 @@
-import me from "./me.jpeg"
+import me from './me.jpeg'
 
 export { me }

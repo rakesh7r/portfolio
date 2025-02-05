@@ -1,10 +1,13 @@
-import { createContext } from "react"
+import { createContext } from 'react'
 
-export type themes = "light" | "dark"
+export type themes = 'light' | 'dark'
 
 type themeContextType = {
-  theme: themes
-  toggleTheme: () => void
+    theme: themes
+    toggleTheme: () => void
 }
-const currentTheme = (localStorage.getItem("theme") as themes) || "light"
-export const ThemeContext = createContext<themeContextType>({ theme: currentTheme, toggleTheme: () => {} })
+const currentTheme = (localStorage.getItem('theme') as themes) || 'light'
+export const ThemeContext = createContext<themeContextType>({
+    theme: currentTheme,
+    toggleTheme: () => {},
+})

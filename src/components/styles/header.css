@@ -1,0 +1,25 @@
+.icon {
+    transition:
+        transform 1s ease,
+        opacity 1s ease;
+}
+
+.icon.sun {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.icon.moon {
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+
+.dark .theme-toggle .icon.sun {
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+.dark .theme-toggle .icon.moon {
+    transform: rotate(0deg);
+    opacity: 1;
+}

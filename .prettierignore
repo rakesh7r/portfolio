@@ -1,0 +1,11 @@
+*.lock.*
+*.config.*
+
+/node_modules
+/dist
+/build
+/coverage
+/dist
+/coverage
+
+.prettierrc.json
