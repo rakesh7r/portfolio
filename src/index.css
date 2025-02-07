@@ -161,3 +161,12 @@ button:focus-visible {
         @apply bg-background text-foreground;
     }
 }
+
+.dark {
+    .section {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+        border-color: rgb(30 41 59 / var(--tw-border-opacity, 1));
+        border-bottom-width: 4px;
+    }
+}

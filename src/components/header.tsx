@@ -17,7 +17,6 @@ export default function Header() {
 			const currentSection = document.querySelectorAll('.section');
 			if (currentSection) {
 				currentSection.forEach((section) => {
-					console.log(section);
 					const sectionTop = (section as HTMLElement).offsetTop;
 					const sectionHeight = (section as HTMLElement).clientHeight;
 					if (window.scrollY >= sectionTop - sectionHeight / 2) {
