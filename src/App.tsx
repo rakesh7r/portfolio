@@ -4,6 +4,7 @@ import Header from './components/header';
 import Me from './components/Me';
 import Projects from './components/projects';
 import Contact from './components/contact';
+import Footer from './components/footer';
 import ThemeContextProvider from './contexts/theme/ThemeProvider';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 				<Projects />
 				<Experience />
 				<Contact />
+				<Footer />
 			</ThemeContextProvider>
 		</div>
 	);

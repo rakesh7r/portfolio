@@ -1,7 +1,7 @@
 import '@/components/styles/header.css';
 import Anchor from './custom/Anchor';
 import ThemeSwitch from './custom/themeSwitch';
-import { Github, Linkedin, Menu } from 'lucide-react';
+import { Github, Linkedin, Menu, Mail } from 'lucide-react';
 import ZoomIn from './custom/ZoomIn';
 import { useState } from 'react';
 import { motion } from 'motion/react';
@@ -93,6 +93,9 @@ export default function Header() {
 				</ZoomIn>
 				<ZoomIn>
 					<Github onClick={() => window.open('https://github.com/rakesh7r')} />
+				</ZoomIn>
+				<ZoomIn>
+					<Mail onClick={() => window.open('mailto:rakeshgandla200@gmail.com')} />
 				</ZoomIn>
 				<ZoomIn>
 					<ThemeSwitch />

@@ -170,3 +170,7 @@ button:focus-visible {
         border-bottom-width: 4px;
     }
 }
+
+::selection {
+    background: #4ba6e7;
+}
