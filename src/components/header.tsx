@@ -3,7 +3,7 @@ import Anchor from './custom/Anchor';
 import ThemeSwitch from './custom/themeSwitch';
 import { Github, Linkedin, Menu } from 'lucide-react';
 import ZoomIn from './custom/ZoomIn';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { useIsSmallScreen } from '@/hooks/useIsSmallScreen';
 
@@ -12,23 +12,23 @@ export default function Header() {
 	const [menuOpen, setMenuOpen] = useState<boolean>(false);
 	const isSmallScreen = useIsSmallScreen();
 
-	useEffect(() => {
-		const handleScroll = () => {
-			const currentSection = document.querySelectorAll('.section');
-			if (currentSection) {
-				currentSection.forEach((section) => {
-					const sectionTop = (section as HTMLElement).offsetTop;
-					const sectionHeight = (section as HTMLElement).clientHeight;
-					if (window.scrollY >= sectionTop - sectionHeight / 2) {
-						setActiveSection(section.id);
-					}
-				});
-			}
-		};
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		const currentSection = document.querySelectorAll('.section');
+	// 		if (currentSection) {
+	// 			currentSection.forEach((section) => {
+	// 				const sectionTop = (section as HTMLElement).offsetTop;
+	// 				const sectionHeight = (section as HTMLElement).clientHeight;
+	// 				if (window.scrollY >= sectionTop - sectionHeight / 2) {
+	// 					setActiveSection(section.id);
+	// 				}
+	// 			});
+	// 		}
+	// 	};
 
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	// 	window.addEventListener('scroll', handleScroll);
+	// 	return () => window.removeEventListener('scroll', handleScroll);
+	// }, []);
 
 	const toggleMenu = () => {
 		setMenuOpen((menuOpen) => !menuOpen);

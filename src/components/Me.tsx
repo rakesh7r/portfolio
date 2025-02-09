@@ -6,7 +6,7 @@ import MyIntro from './custom/Intro';
 const Me = () => {
 	return (
 		<motion.div
-			className="section w-full h-[85vh] px-0 md:px-16 text-black-500 dark:text-white shadow-none sm:shadow-lg mt-0 rounded-md flex flex-col md:flex-row gap-4 items-center justify-between  p-4"
+			className="section w-full h-[90vh] px-0 md:px-16 text-black-500 dark:text-white shadow-none sm:shadow-md hover:shadow-lg mt-0 rounded-md flex flex-col md:flex-row gap-4 items-center justify-between  p-4"
 			id="profile"
 			initial={{ opacity: 0, scale: 0.5 }}
 			animate={{ opacity: 1, scale: 1 }}
@@ -46,6 +46,7 @@ const profilePic = {
 	height: 300,
 	borderRadius: '50%',
 	background: 'var(--accent)',
+	boxShadow: '0 0 10px 0 #999999',
 };
 
 export default Me;
