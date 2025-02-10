@@ -5,33 +5,21 @@ import ExperienceItem from './custom/experienceItem';
 export default function Experience() {
 	const experiences: ExperienceType[] = [
 		{
-			company: 'Company 1',
+			company: 'Dupont speciality Products Inida Pvt ltd.',
 			positions: [
 				{
-					position: 'Position 1',
-					description: 'Description 1',
-					startDate: '2020-01-01',
-					endDate: '2020-01-01',
-					location: 'Location 1',
+					position: 'Frontend Developer',
+					description: ['Description 1', 'Description 2', 'Description 3'],
+					startDate: '2022-07',
+					endDate: 'Present',
+					location: 'Hyderabad, India',
 				},
 				{
-					position: 'Position 2',
-					description: 'Description 2',
-					startDate: '2020-01-01',
-					endDate: '2020-01-01',
-					location: 'Location 2',
-				},
-			],
-		},
-		{
-			company: 'Company 2',
-			positions: [
-				{
-					position: 'Position 1',
-					description: 'Description 1',
-					startDate: '2020-01-01',
-					endDate: '2020-01-01',
-					location: 'Location 1',
+					position: 'Software development Intern',
+					description: ['Description 2'],
+					startDate: '2021-06',
+					endDate: '2021-07',
+					location: 'Hyderabad, India',
 				},
 			],
 		},

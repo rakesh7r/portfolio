@@ -5,7 +5,7 @@ export interface ExperienceType {
 
 export interface PositionType {
 	position: string;
-	description: string;
+	description: string[];
 	startDate: string;
 	endDate: string;
 	location: string;
