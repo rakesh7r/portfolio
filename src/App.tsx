@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { GradientBackground } from '@/components/ui/gradient-bg'
@@ -50,26 +50,15 @@ interface PortfolioData {
   }
 }
 
+import pfData from '../data/portfolio.json'
+
 function App() {
-  const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const loadPortfolioData = async () => {
-      try {
-        const response = await fetch('/src/data/portfolio.json')
-        const data = await response.json()
-        setPortfolioData(data)
-      } catch (error) {
-        console.error('Failed to load portfolio data:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadPortfolioData()
-  }, [])
-
+  // const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(pfData as PortfolioData)
+  // const [loading, setLoading] = useState(false)
+  const portfolioData = pfData as PortfolioData
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [loading, setLoading] = useState(false)
+  
   if (loading) {
     return (
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Variants } from "framer-motion"
+
 
 interface HeroProps {
   data: {
@@ -29,17 +31,19 @@ export function Hero({ data }: HeroProps) {
     }
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: 'easeOut'
-      }
-    }
+
+  const itemVariants: Variants = {
+      hidden: { opacity: 0, y: 30 },
+      visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+              duration: 0.8,
+              ease: "easeOut", // now TS knows it's a valid literal
+          },
+      },
   }
+
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4">
