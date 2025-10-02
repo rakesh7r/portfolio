@@ -1,0 +1,106 @@
+{
+  "name": "Rakesh Gandla",
+  "title": "Frontend Developer | React Specialist",
+  "tagline": "I build fast, responsive, and visually stunning applications.",
+  "bio": "Passionate frontend developer with expertise in React.js, modern web technologies, and creating exceptional user experiences. I love turning complex problems into simple, beautiful, and intuitive solutions.",
+  "experience": [
+    {
+      "company": "ABC Corp",
+      "role": "Frontend Engineer",
+      "duration": "2022 - Present",
+      "description": "Worked on building scalable SPAs with React and Zustand. Led the migration of legacy systems to modern React architecture, improving performance by 40%.",
+      "technologies": ["React", "TypeScript", "Zustand", "TailwindCSS"]
+    },
+    {
+      "company": "XYZ Solutions",
+      "role": "Junior React Developer",
+      "duration": "2021 - 2022",
+      "description": "Developed responsive web applications and collaborated with design teams to implement pixel-perfect UI components.",
+      "technologies": ["React", "JavaScript", "CSS3", "REST APIs"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Stock Analyzer",
+      "description": "Analyzes stock trends using historical data and LLM insights. Features real-time data visualization and predictive analytics.",
+      "tech": ["React", "Python", "yfinance", "Framer Motion", "Chart.js"],
+      "github": "https://github.com/username/stock-analyzer",
+      "demo": "https://stock-analyzer.vercel.app",
+      "featured": true
+    },
+    {
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates and team collaboration features.",
+      "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
+      "github": "https://github.com/username/task-manager",
+      "demo": "https://task-manager-demo.vercel.app",
+      "featured": true
+    },
+    {
+      "title": "E-commerce Dashboard",
+      "description": "Admin dashboard for e-commerce platform with analytics, inventory management, and order tracking.",
+      "tech": ["React", "TypeScript", "Redux", "Material-UI"],
+      "github": "https://github.com/username/ecommerce-dashboard",
+      "demo": "https://dashboard-demo.vercel.app",
+      "featured": false
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Building Scalable React Applications with Modern State Management",
+      "description": "A comprehensive guide on implementing Zustand for state management in large-scale React applications, covering best practices and performance optimizations.",
+      "date": "2024-01-15",
+      "readTime": "8 min read",
+      "tags": ["React", "Zustand", "State Management", "Performance"],
+      "url": "https://medium.com/@rakesh/building-scalable-react-applications",
+      "featured": true
+    },
+    {
+      "title": "The Future of Frontend Development: Trends to Watch in 2024",
+      "description": "Exploring emerging trends in frontend development including AI-powered tools, micro-frontends, and the evolution of JavaScript frameworks.",
+      "date": "2024-01-08",
+      "readTime": "6 min read",
+      "tags": ["Frontend", "Trends", "JavaScript", "AI"],
+      "url": "https://dev.to/rakesh/future-of-frontend-development",
+      "featured": true
+    },
+    {
+      "title": "Optimizing React Performance: A Developer's Guide",
+      "description": "Deep dive into React performance optimization techniques including memoization, code splitting, and bundle analysis.",
+      "date": "2023-12-20",
+      "readTime": "10 min read",
+      "tags": ["React", "Performance", "Optimization"],
+      "url": "https://hashnode.com/@rakesh/optimizing-react-performance",
+      "featured": false
+    },
+    {
+      "title": "CSS Grid vs Flexbox: When to Use What",
+      "description": "A practical comparison of CSS Grid and Flexbox with real-world examples and use cases for modern web layouts.",
+      "date": "2023-12-10",
+      "readTime": "5 min read",
+      "tags": ["CSS", "Grid", "Flexbox", "Layout"],
+      "url": "https://css-tricks.com/css-grid-vs-flexbox",
+      "featured": false
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "technologies": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "TailwindCSS"]
+    },
+    {
+      "category": "State Management",
+      "technologies": ["Redux", "Zustand", "Context API"]
+    },
+    {
+      "category": "Tools & Others",
+      "technologies": ["Git", "Webpack", "Vite", "Docker", "REST APIs"]
+    }
+  ],
+  "socials": {
+    "github": "https://github.com/username",
+    "linkedin": "https://linkedin.com/in/username",
+    "twitter": "https://x.com/username",
+    "email": "rakesh@example.com"
+  }
+}
