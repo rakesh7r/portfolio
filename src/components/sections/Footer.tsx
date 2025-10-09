@@ -62,7 +62,7 @@ export function Footer({ socials }: FooterProps) {
             </Button>
           </div>
           <p className="text-muted-foreground">
-            © 2024 Built with React, Framer Motion, and lots of ☕
+            © {new Date().getFullYear() } Built with React, Framer Motion, and lots of ☕
           </p>
         </div>
       </div>

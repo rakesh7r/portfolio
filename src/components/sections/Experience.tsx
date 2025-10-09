@@ -7,7 +7,7 @@ interface ExperienceItem {
   company: string
   role: string
   duration: string
-  description: string
+  description: string[] | string
   technologies: string[]
 }
 
@@ -55,9 +55,15 @@ export function Experience({ data }: ExperienceProps) {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
+                {Array.isArray(item.description) ? (
+                    <ul className="list-disc list-inside mb-4 text-foreground/90">
+                      {item.description.map((desc, idx) => (
+                        <li key={idx}>{desc}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mb-4 text-foreground/90">{item.description}</p>
+                  )}
                   <div className="flex flex-wrap gap-2">
                     {item.technologies.map((tech) => (
                       <Badge key={tech} variant="outline" className="text-xs">

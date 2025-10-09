@@ -7,10 +7,10 @@ import { Section } from '@/components/ui/section'
 
 interface Project {
   title: string
-  description: string
+  description: string | string[]
   tech: string[]
   github: string
-  demo: string
+  demo?: string
   featured: boolean
 }
 
@@ -69,7 +69,7 @@ export function Projects({ data }: ProjectsProps) {
                             <Github className="w-4 h-4" />
                           </a>
                         </Button>
-                        <Button
+                        {project.demo && <Button
                           variant="ghost"
                           size="icon"
                           className="h-8 w-8 opacity-70 hover:opacity-100"
@@ -78,11 +78,19 @@ export function Projects({ data }: ProjectsProps) {
                           <a href={project.demo} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4" />
                           </a>
-                        </Button>
+                        </Button>}
                       </div>
                     </CardTitle>
                     <CardDescription className="leading-relaxed">
-                      {project.description}
+                      {typeof project.description === 'string' ? (
+                        project.description
+                      ) : (
+                        <ul className="list-disc list-inside space-y-1">
+                          {project.description.map((point, idx) => (
+                            <li key={idx}>{point}</li>
+                          ))}
+                        </ul>
+                      )}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>

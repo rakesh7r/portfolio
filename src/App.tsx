@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react'
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
@@ -18,12 +19,12 @@ interface PortfolioData {
     company: string
     role: string
     duration: string
-    description: string
+    description: string[] | string
     technologies: string[]
   }>
   projects: Array<{
     title: string
-    description: string
+    description: string | string[]
     tech: string[]
     github: string
     demo: string
@@ -85,22 +86,22 @@ function App() {
   }
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-      <div className="min-h-screen bg-background text-foreground overflow-x-hidden min-w-screen">
-        <GradientBackground />
-        <ThemeToggle />
-        
-        <main>
-          <Hero data={portfolioData} />
-          <Experience data={portfolioData.experience} />
-          <Projects data={portfolioData.projects} />
-          <Blogs data={portfolioData.blogs} />
-          <Skills data={portfolioData.skills} />
-        </main>
-        
-        <Footer socials={portfolioData.socials} />
-      </div>
-    </ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <div className="min-h-screen bg-background text-foreground overflow-x-hidden min-w-screen">
+              <GradientBackground />
+              <ThemeToggle />
+
+              <main>
+                  <Hero data={portfolioData} />
+                  <Experience data={portfolioData.experience} />
+                  <Projects data={portfolioData.projects} />
+                  {/* <Blogs data={portfolioData.blogs} /> */}
+                  <Skills data={portfolioData.skills} />
+              </main>
+
+              <Footer socials={portfolioData.socials} />
+          </div>
+      </ThemeProvider>
   )
 }
 
