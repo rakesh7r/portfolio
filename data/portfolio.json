@@ -1,113 +1,136 @@
 {
-    "name": "Rakesh Gandla",
-    "title": "Expert in React, FastAPI, and GenAI | Crafting End-to-End Web Solutions",
-    "tagline": "I build fast, responsive, and visually stunning solutions.",
-    "bio": "A results-driven Full-Stack Developer specializing in high-performance web applications using React.js, TypeScript, and Python (FastAPI). I excel at building scalable, AI-driven solutions, managing large-scale data, and optimizing application performance. Passionate about clean code and leveraging technology to create innovative, user-centric products.",
-    "experience": [
-        {
-            "company": "Dupont Specialty Products Inc.",
-            "role": "Frontend Developer Intern",
-            "duration": "January, 2022 - July, 2022",
-            "description": [
-                "Resolved critical issues and optimized React-Redux applications, improving performance by 30% through code refactoring and efficient state management.",
-                "Collaborated with cross-functional teams to enhance user engagement by 25% and reduced API latency by 20% via optimized FastAPI endpoints and database queries."
-            ],
-            "technologies": ["React", "JavaScript", "FastAPI", "Python", "TailwindCSS", "Redux", "REST APIs", "Git", "CSS3", "HTML5"]
-        },
-        {
-            "company": "Dupont Specialty Products Inc.",
-            "role": "Full Stack Developer",
-            "duration": "August, 2022 - Present",
-            "description": [
-                "Built scalable, high-performance web applications using React, TypeScript, and FastAPI.",
-                "Improved application load times by 40% through performance optimization and code refinement.",
-                "Automated on-premise deployments using Docker, NGINX, and shell scripts, streamlining CI/CD workflows.",
-                "Developed AI-powered tools that reduced manual processing from days to seconds.",
-                "Optimized data workflows for handling 10M+ records, ensuring low-latency performance and reliability."
-            ],
-            "technologies": ["React", "JS/TS", "CSS/TailwindCSS", "REST APIs", "Docker", "FastAPI", "Python", "Git", "NGINX", "Redux", "CI/CD"]
-        }
-    ],
-    "projects": [
-        {
-            "title": "MCP-Rag exercise",
-            "description": [
-                "Developed a web application that leverages GenAI to provide accurate answers from uploaded documents, enhancing user experience and information retrieval.",
-                "Implemented MCP(Model Context Protocol) to fetch latest stock related data from yfinanace API."
-            ],
-            "tech": ["React", "Zustand", "Python", "yfinance", "MCP", "OpenAI", "FastAPI", "TypeScript", "TailwindCSS"],
-            "github": "https://github.com/rakesh7r/market-analyzer/tree/dev",
-            "featured": true
-        },
-        {
-            "title": "Cognito - Chatbot",
-            "description": ["A Wrapper chatbot application that built around Gemini models."],
-            "tech": ["React", "NextJs", "TypeScript", "TailwindCSS", "Vercel", "Gemini API", "Redux"],
-            "github": "https://github.com/rakesh7r/chatbot/tree/dev",
-            "demo": "https://cognito-drab.vercel.app/chat",
-            "featured": true
-        }
-    ],
-    "blogs": [
-        {
-            "title": "Building Scalable React Applications with Modern State Management",
-            "description": "A comprehensive guide on implementing Zustand for state management in large-scale React applications, covering best practices and performance optimizations.",
-            "date": "2024-01-15",
-            "readTime": "8 min read",
-            "tags": ["React", "Zustand", "State Management", "Performance"],
-            "url": "https://medium.com/@rakesh/building-scalable-react-applications",
-            "featured": true
-        },
-        {
-            "title": "The Future of Frontend Development: Trends to Watch in 2024",
-            "description": "Exploring emerging trends in frontend development including AI-powered tools, micro-frontends, and the evolution of JavaScript frameworks.",
-            "date": "2024-01-08",
-            "readTime": "6 min read",
-            "tags": ["Frontend", "Trends", "JavaScript", "AI"],
-            "url": "https://dev.to/rakesh/future-of-frontend-development",
-            "featured": true
-        },
-        {
-            "title": "Optimizing React Performance: A Developer's Guide",
-            "description": "Deep dive into React performance optimization techniques including memoization, code splitting, and bundle analysis.",
-            "date": "2023-12-20",
-            "readTime": "10 min read",
-            "tags": ["React", "Performance", "Optimization"],
-            "url": "https://hashnode.com/@rakesh/optimizing-react-performance",
-            "featured": false
-        },
-        {
-            "title": "CSS Grid vs Flexbox: When to Use What",
-            "description": "A practical comparison of CSS Grid and Flexbox with real-world examples and use cases for modern web layouts.",
-            "date": "2023-12-10",
-            "readTime": "5 min read",
-            "tags": ["CSS", "Grid", "Flexbox", "Layout"],
-            "url": "https://css-tricks.com/css-grid-vs-flexbox",
-            "featured": false
-        }
-    ],
-    "skills": [
-        {
-            "category": "Frontend",
-            "technologies": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "TailwindCSS", "Ant Design", "ShadCn/ui"]
-        },
-        {
-            "category": "State Management",
-            "technologies": ["Redux", "Zustand", "Context API"]
-        },
-        {
-            "category": "Backend",
-            "technologies": ["FastAPI", "Python", "MySQL", "Prompt Engineering", "QdrantDB(VectorDB)", "LLM APIs"]
-        },
-        {
-            "category": "Tools & Others",
-            "technologies": ["Git", "Ubuntu/Linux", "Jira", "Webpack", "Vite", "Docker", "REST APIs", "NGINX", "CI/CD"]
-        }
-    ],
-    "socials": {
-        "github": "https://github.com/rakesh7r",
-        "linkedin": "https://linkedin.com/in/rakesh7r",
-        "twitter": "https://x.com/rakesh7rr",
-        "email": "rakeshgandla201@gmail.com"
-    }
+	"name": "Rakesh Gandla",
+	"title": "Expert in React, FastAPI, and GenAI | Crafting End-to-End Web Solutions",
+	"tagline": "I build fast, responsive, and visually stunning solutions.",
+	"bio": "A results-driven Full-Stack Developer specializing in high-performance web applications using React.js, TypeScript, and Python (FastAPI). I excel at building scalable, AI-driven solutions, managing large-scale data, and optimizing application performance. Passionate about clean code and leveraging technology to create innovative, user-centric products.",
+	"experience": [
+		{
+			"company": "Dupont Specialty Products Inc.",
+			"role": "Full Stack Developer",
+			"duration": "August, 2022 - Present",
+			"description": [
+				"Built scalable, high-performance web applications using React, TypeScript, and FastAPI.",
+				"Improved application load times by 40% through performance optimization and code refinement.",
+				"Automated on-premise deployments using Docker, NGINX, and shell scripts, streamlining CI/CD workflows.",
+				"Developed AI-powered tools that reduced manual processing from days to seconds.",
+				"Optimized data workflows for handling 10M+ records, ensuring low-latency performance and reliability."
+			],
+			"technologies": [
+				"React",
+				"JS/TS",
+				"CSS/TailwindCSS",
+				"REST APIs",
+				"Docker",
+				"FastAPI",
+				"Python",
+				"Git",
+				"NGINX",
+				"Redux",
+				"CI/CD"
+			]
+		},
+		{
+			"company": "Dupont Specialty Products Inc.",
+			"role": "Frontend Developer Intern",
+			"duration": "January, 2022 - July, 2022",
+			"description": [
+				"Resolved critical issues and optimized React-Redux applications, improving performance by 30% through code refactoring and efficient state management.",
+				"Collaborated with cross-functional teams to enhance user engagement by 25% and reduced API latency by 20% via optimized FastAPI endpoints and database queries."
+			],
+			"technologies": [
+				"React",
+				"JavaScript",
+				"FastAPI",
+				"Python",
+				"TailwindCSS",
+				"Redux",
+				"REST APIs",
+				"Git",
+				"CSS3",
+				"HTML5"
+			]
+		}
+	],
+	"projects": [
+		{
+			"title": "MCP-Rag exercise",
+			"description": [
+				"Developed a web application that leverages GenAI to provide accurate answers from uploaded documents, enhancing user experience and information retrieval.",
+				"Implemented MCP(Model Context Protocol) to fetch latest stock related data from yfinanace API."
+			],
+			"tech": ["React", "Zustand", "Python", "yfinance", "MCP", "OpenAI", "FastAPI", "TypeScript", "TailwindCSS"],
+			"github": "https://github.com/rakesh7r/market-analyzer/tree/dev",
+			"featured": true
+		},
+		{
+			"title": "Cognito - Chatbot",
+			"description": ["A Wrapper chatbot application that built around Gemini models."],
+			"tech": ["React", "NextJs", "TypeScript", "TailwindCSS", "Vercel", "Gemini API", "Redux"],
+			"github": "https://github.com/rakesh7r/chatbot/tree/dev",
+			"demo": "https://cognito-drab.vercel.app/chat",
+			"featured": true
+		}
+	],
+	"blogs": [
+		{
+			"title": "Building Scalable React Applications with Modern State Management",
+			"description": "A comprehensive guide on implementing Zustand for state management in large-scale React applications, covering best practices and performance optimizations.",
+			"date": "2024-01-15",
+			"readTime": "8 min read",
+			"tags": ["React", "Zustand", "State Management", "Performance"],
+			"url": "https://medium.com/@rakesh/building-scalable-react-applications",
+			"featured": true
+		},
+		{
+			"title": "The Future of Frontend Development: Trends to Watch in 2024",
+			"description": "Exploring emerging trends in frontend development including AI-powered tools, micro-frontends, and the evolution of JavaScript frameworks.",
+			"date": "2024-01-08",
+			"readTime": "6 min read",
+			"tags": ["Frontend", "Trends", "JavaScript", "AI"],
+			"url": "https://dev.to/rakesh/future-of-frontend-development",
+			"featured": true
+		},
+		{
+			"title": "Optimizing React Performance: A Developer's Guide",
+			"description": "Deep dive into React performance optimization techniques including memoization, code splitting, and bundle analysis.",
+			"date": "2023-12-20",
+			"readTime": "10 min read",
+			"tags": ["React", "Performance", "Optimization"],
+			"url": "https://hashnode.com/@rakesh/optimizing-react-performance",
+			"featured": false
+		},
+		{
+			"title": "CSS Grid vs Flexbox: When to Use What",
+			"description": "A practical comparison of CSS Grid and Flexbox with real-world examples and use cases for modern web layouts.",
+			"date": "2023-12-10",
+			"readTime": "5 min read",
+			"tags": ["CSS", "Grid", "Flexbox", "Layout"],
+			"url": "https://css-tricks.com/css-grid-vs-flexbox",
+			"featured": false
+		}
+	],
+	"skills": [
+		{
+			"category": "Frontend",
+			"technologies": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "TailwindCSS", "Ant Design", "ShadCn/ui"]
+		},
+		{
+			"category": "State Management",
+			"technologies": ["Redux", "Zustand", "Context API"]
+		},
+		{
+			"category": "Backend",
+			"technologies": ["FastAPI", "Python", "MySQL", "Prompt Engineering", "QdrantDB(VectorDB)", "LLM APIs"]
+		},
+		{
+			"category": "Tools & Others",
+			"technologies": ["Git", "Ubuntu/Linux", "Jira", "Webpack", "Vite", "Docker", "REST APIs", "NGINX", "CI/CD"]
+		}
+	],
+	"socials": {
+		"github": "https://github.com/rakesh7r",
+		"linkedin": "https://linkedin.com/in/rakesh7r",
+		"twitter": "https://x.com/rakesh7rr",
+		"email": "rakeshgandla201@gmail.com"
+	}
 }
