@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "name": "Rakesh Gandla",
+    "role": "Full Stack & AI Engineer",
+    "title": "Rakesh Gandla — Full Stack & AI Engineer",
+    "description": "Full stack engineer building production AI systems — RAG platforms, LLM applications, and the infrastructure that keeps them fast, observable, and reliable at scale.",
+    "url": "https://rakeshgandla.dev",
+    "location": "India",
+    "email": "rakeshgandla200@gmail.com",
+    "mark": "RG"
+  },
+  "social": {
+    "github": "https://github.com/rakesh7r",
+    "linkedin": "https://www.linkedin.com/in/rakesh-gandla",
+    "resume": ""
+  },
+  "hero": {
+    "eyebrow": "Full Stack · AI Engineering · Production Systems",
+    "headline": ["AI systems that", "survive production."],
+    "gradientLine": 1,
+    "subheadline": "I design and ship LLM applications end to end — retrieval pipelines, vector search, typed APIs, and the frontend that makes them feel effortless. Not demos. Systems with users, uptime, and consequences.",
+    "primaryCta": { "label": "View the work", "href": "#work" },
+    "secondaryCta": { "label": "Get in touch", "href": "#contact" }
+  },
+  "metrics": [
+    { "value": "4+", "label": "Production AI systems shipped" },
+    { "value": "1M+", "label": "Vectors indexed & queried" },
+    { "value": "<200ms", "label": "p95 retrieval latency" },
+    { "value": "99.9%", "label": "Uptime across deployments" }
+  ],
+  "projects": [
+    {
+      "slug": "rag-platform",
+      "name": "Enterprise RAG Platform",
+      "tagline": "Document intelligence that answers with citations, not hallucinations.",
+      "year": "2025",
+      "status": "In production",
+      "description": "A retrieval-augmented generation platform that turns unstructured company documents into a queryable knowledge system. Hybrid search over Qdrant, semantic chunking tuned per document type, and grounded answers with inline source citations.",
+      "metrics": [
+        { "value": "1M+", "label": "vectors indexed" },
+        { "value": "<200ms", "label": "p95 retrieval" },
+        { "value": "92%", "label": "answer groundedness" }
+      ],
+      "architecture": [
+        { "name": "Next.js Client", "detail": "Streaming UI · optimistic state" },
+        { "name": "FastAPI Gateway", "detail": "Auth · rate limits · SSE streaming" },
+        { "name": "Retrieval Layer", "detail": "Hybrid search · re-ranking · Qdrant" },
+        { "name": "LLM Orchestration", "detail": "LangChain · Gemini · OpenAI fallback" },
+        { "name": "PostgreSQL + Object Store", "detail": "Metadata · documents · audit log" }
+      ],
+      "challenges": [
+        {
+          "problem": "Naive chunking destroyed answer quality on tables, contracts, and scanned PDFs.",
+          "solution": "Built structure-aware chunking with per-document-type strategies and overlap tuning — groundedness jumped from ~60% to 92%."
+        },
+        {
+          "problem": "LLM latency made the product feel broken under real load.",
+          "solution": "Token streaming end to end, retrieval-stage caching, and a re-ranking cutoff that cut p95 response time by more than half."
+        }
+      ],
+      "outcome": "Replaced hours of manual document lookup with sub-second grounded answers — adopted as the internal default for knowledge search.",
+      "stack": ["Next.js", "TypeScript", "FastAPI", "Python", "LangChain", "Qdrant", "PostgreSQL", "Gemini", "Docker", "AWS"],
+      "links": {}
+    },
+    {
+      "slug": "llm-workflow-engine",
+      "name": "LLM Workflow Engine",
+      "tagline": "Multi-step AI pipelines with retries, fallbacks, and full observability.",
+      "year": "2025",
+      "status": "In production",
+      "description": "An orchestration layer for chained LLM operations — extraction, classification, generation — where every step is typed, retried on failure, falls back across model providers, and leaves a complete audit trail. Built because production AI fails in ways demos never show.",
+      "metrics": [
+        { "value": "50K+", "label": "pipeline runs / month" },
+        { "value": "99.9%", "label": "completion rate" },
+        { "value": "3", "label": "model providers, zero lock-in" }
+      ],
+      "architecture": [
+        { "name": "Pipeline API", "detail": "FastAPI · async task graph" },
+        { "name": "Step Executor", "detail": "Typed I/O · retries · timeouts" },
+        { "name": "Provider Router", "detail": "Gemini ↔ OpenAI failover · cost routing" },
+        { "name": "Observability", "detail": "Per-step traces · token accounting" },
+        { "name": "PostgreSQL", "detail": "Run history · replayable state" }
+      ],
+      "challenges": [
+        {
+          "problem": "A single provider outage took every dependent feature down with it.",
+          "solution": "Provider-agnostic step contracts with automatic failover — outages became invisible; completion rate held at 99.9%."
+        },
+        {
+          "problem": "Debugging a failed 6-step chain from logs alone was guesswork.",
+          "solution": "Persisted every step's input, output, and token cost as replayable state — failures now reproduce locally in seconds."
+        }
+      ],
+      "outcome": "Turned fragile prompt chains into dependable infrastructure other teams build features on without thinking about model failure.",
+      "stack": ["Python", "FastAPI", "PostgreSQL", "OpenAI", "Gemini", "Docker", "AWS"],
+      "links": {}
+    },
+    {
+      "slug": "realtime-dashboard",
+      "name": "Realtime Ops Dashboard",
+      "tagline": "Live system state for the people who get paged when it breaks.",
+      "year": "2024",
+      "status": "In production",
+      "description": "A full stack monitoring surface for the AI platform: live pipeline health, retrieval quality drift, token spend, and latency percentiles — streamed to the browser over websockets and rendered without jank.",
+      "metrics": [
+        { "value": "real-time", "label": "sub-second updates" },
+        { "value": "30+", "label": "tracked signals" },
+        { "value": "60fps", "label": "under full stream load" }
+      ],
+      "architecture": [
+        { "name": "React Client", "detail": "Virtualized charts · websocket state" },
+        { "name": "Event Gateway", "detail": "FastAPI websockets · backpressure" },
+        { "name": "Aggregation Layer", "detail": "Rolling percentiles · drift detection" },
+        { "name": "PostgreSQL", "detail": "Time-bucketed history" }
+      ],
+      "challenges": [
+        {
+          "problem": "Streaming 30+ signals froze the UI on mid-range laptops.",
+          "solution": "Batched websocket frames, virtualized rendering, and canvas-based charts — steady 60fps at full load."
+        }
+      ],
+      "outcome": "Cut incident detection from 'a user told us' to under a minute — and made token spend visible before invoices did.",
+      "stack": ["React", "TypeScript", "FastAPI", "WebSockets", "PostgreSQL", "Docker"],
+      "links": {}
+    }
+  ],
+  "experience": [
+    {
+      "company": "Current Company",
+      "role": "Full Stack Engineer — AI Platform",
+      "period": "2024 — Present",
+      "location": "Remote",
+      "summary": "Own the AI platform end to end: retrieval infrastructure, LLM orchestration, and the product surfaces built on top of them.",
+      "highlights": [
+        "Designed and shipped the RAG platform serving grounded answers over 1M+ indexed vectors at <200ms p95",
+        "Built the LLM workflow engine handling 50K+ monthly runs with 99.9% completion across three model providers",
+        "Introduced structure-aware document chunking that raised answer groundedness from ~60% to 92%",
+        "Containerized the platform with Docker/Podman and moved deployments to AWS with zero-downtime releases"
+      ],
+      "stack": ["Next.js", "FastAPI", "LangChain", "Qdrant", "PostgreSQL", "AWS"]
+    },
+    {
+      "company": "Previous Company",
+      "role": "Software Engineer",
+      "period": "2022 — 2024",
+      "location": "India",
+      "summary": "Full stack product engineering — React frontends, Python services, and the data layer between them.",
+      "highlights": [
+        "Shipped customer-facing features across a React/TypeScript frontend and FastAPI backend",
+        "Designed PostgreSQL schemas and query paths that held up as data grew 10x",
+        "Built internal tooling that cut a recurring manual workflow from hours to minutes"
+      ],
+      "stack": ["React", "TypeScript", "Python", "FastAPI", "PostgreSQL"]
+    }
+  ],
+  "skills": [
+    {
+      "title": "AI Engineering",
+      "blurb": "The layer where most projects die between demo and production — and where I spend most of my time.",
+      "items": [
+        { "name": "RAG Systems", "note": "chunking strategy, hybrid retrieval, re-ranking, groundedness evals" },
+        { "name": "LLM Applications", "note": "streaming, tool use, structured output, provider failover" },
+        { "name": "Vector Search", "note": "Qdrant in production — indexing, filtering, quantization" },
+        { "name": "LangChain", "note": "orchestration without the spaghetti" },
+        { "name": "Gemini / OpenAI", "note": "multi-provider routing by cost and capability" }
+      ]
+    },
+    {
+      "title": "Full Stack",
+      "blurb": "Typed from the database to the pixel. The frontend is part of the system, not an afterthought.",
+      "items": [
+        { "name": "React / Next.js", "note": "App Router, streaming SSR, real 60fps interfaces" },
+        { "name": "TypeScript", "note": "strict mode, end-to-end types across the API boundary" },
+        { "name": "FastAPI / Python", "note": "async services, websockets, SSE streaming" },
+        { "name": "PostgreSQL", "note": "schema design, query plans, migrations that don't hurt" }
+      ]
+    },
+    {
+      "title": "Infrastructure",
+      "blurb": "Software isn't done until it deploys, scales, and tells you when it's unhealthy.",
+      "items": [
+        { "name": "Docker / Podman", "note": "reproducible builds, minimal images" },
+        { "name": "AWS", "note": "compute, storage, networking for the AI stack" },
+        { "name": "System Design", "note": "boring architectures that survive traffic and time" },
+        { "name": "Observability", "note": "traces, token accounting, latency percentiles" }
+      ]
+    }
+  ],
+  "principles": [
+    {
+      "title": "Production is the only benchmark",
+      "body": "A system that works in a notebook has proven nothing. Real users, real load, real failure modes — that's where engineering starts."
+    },
+    {
+      "title": "Latency is a feature",
+      "body": "Every AI product lives or dies on perceived speed. Streaming, caching, and honest loading states are product decisions, not optimizations."
+    },
+    {
+      "title": "Boring architecture, interesting products",
+      "body": "Postgres over the exotic choice. Typed contracts over cleverness. Novelty budget goes into the product, not the plumbing."
+    },
+    {
+      "title": "Failure is a first-class input",
+      "body": "Models time out, providers go down, retrieval misses. Systems I ship assume all of it and degrade gracefully instead of falling over."
+    }
+  ],
+  "currentFocus": "Currently deep in agentic systems — tool-using LLM workflows with real guardrails — and pushing retrieval quality evals into CI.",
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Let's build something that ships.",
+    "body": "I'm open to conversations about AI platform work, full stack roles, and hard problems that need production-grade answers.",
+    "ctaLabel": "Say hello"
+  }
+}

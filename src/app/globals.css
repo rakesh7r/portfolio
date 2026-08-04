@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------- */
+/* Design tokens                       */
+/* ---------------------------------- */
+
+:root {
+  --bg: #fafafa;
+  --bg-raised: #ffffff;
+  --bg-inset: #f2f2f4;
+  --fg: #17171c;
+  --fg-muted: #5c5c66;
+  --fg-faint: #9494a0;
+  --line: rgba(20, 20, 28, 0.09);
+  --line-strong: rgba(20, 20, 28, 0.16);
+  --accent: #5a5ad1;
+  --accent-soft: rgba(90, 90, 209, 0.1);
+  --glow: rgba(90, 90, 209, 0.16);
+  --glow-2: rgba(56, 178, 218, 0.12);
+  --shadow-premium:
+    0 1px 2px rgba(20, 20, 28, 0.04),
+    0 8px 24px -8px rgba(20, 20, 28, 0.1),
+    0 24px 64px -24px rgba(20, 20, 28, 0.12);
+}
+
+.dark {
+  --bg: #08080c;
+  --bg-raised: #0e0e14;
+  --bg-inset: #0b0b10;
+  --fg: #f2f2f5;
+  --fg-muted: #9c9cab;
+  --fg-faint: #62626f;
+  --line: rgba(244, 244, 250, 0.08);
+  --line-strong: rgba(244, 244, 250, 0.16);
+  --accent: #9c9cf5;
+  --accent-soft: rgba(156, 156, 245, 0.1);
+  --glow: rgba(120, 120, 245, 0.14);
+  --glow-2: rgba(64, 190, 230, 0.08);
+  --shadow-premium:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 8px 24px -8px rgba(0, 0, 0, 0.5),
+    0 24px 64px -24px rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-inset: var(--bg-inset);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", monospace;
+  --shadow-premium: var(--shadow-premium);
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* ---------------------------------- */
+/* Base                                */
+/* ---------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "cv11", "ss01";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Hairline utility — crisper than border on dark */
+.hairline {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+/* Dotted grid backdrop */
+.grid-dots {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Soft radial glow used behind key sections */
+.section-glow {
+  background:
+    radial-gradient(600px 320px at 50% 0%, var(--glow), transparent 70%);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--fg) 30%,
+    var(--accent) 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Masked-reveal helper: children translate up inside overflow-hidden lines */
+.mask-line {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.08em;
+  margin-block: -0.08em;
+}
+
+/* Reduce motion: kill transforms & smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of **Rakesh Gandla** — full stack & AI engineer.
 
-Currently, two official plugins are available:
+Built with Next.js (App Router), TypeScript, Tailwind CSS v4, Motion (Framer Motion), GSAP ScrollTrigger, and Lenis smooth scrolling. Dark-first design with full light-mode support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Editing content
 
-## Expanding the ESLint configuration
+**Every word, link, metric, project, and role on the site lives in one file:**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/data/content.json
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Edit it and the site updates — no component changes needed. The schema is documented in `src/data/types.ts`:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+| Key | Drives |
+| --- | --- |
+| `meta` | Name, SEO title/description, email, site URL |
+| `social` | GitHub / LinkedIn / Twitter / résumé links (empty string hides a link) |
+| `hero` | Headline lines, subheadline, CTAs |
+| `metrics` | The proof strip under the hero |
+| `projects` | Full case studies: metrics, architecture layers, challenges, outcomes, stack |
+| `experience` | Roles with expandable highlights |
+| `skills` | Capability map domains |
+| `principles` | Engineering philosophy |
+| `contact` | Closing section copy |
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Each project's `architecture` array renders as its animated system diagram — top layer first.
+
+## Development
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build (fully static)
+npm start       # serve the production build
 ```
+
+## Performance & accessibility
+
+- Fully static prerender, ~215 kB first-load JS
+- All animation respects `prefers-reduced-motion`
+- Hero canvas pauses when off-screen; DPR capped at 2
+- Semantic landmarks, labelled controls, keyboard-reachable interactions
